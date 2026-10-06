@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Categories and Note Count</h1>
+    <ul>
+        {% for category in categories %}
+            <li>
+                <strong>{{ category.name }}</strong> — {{ category.notes.count }} notes
+            </li>
+        {% empty %}
+         <li>No categories yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
